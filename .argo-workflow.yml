@@ -3,12 +3,12 @@ kind: Workflow
 metadata:
   generateName: test-ci-  # Name of this Workflow
 spec:
-  entrypoint: whalesay           # Defines "whalesay" as the "main" template
+  entrypoint: main           # Defines "whalesay" as the "main" template
   arguments:
     parameters:
       - name: param
   templates:
-  - name: whalesay               # Defining the "whalesay" template
+  - name: main               # Defining the "whalesay" template
     inputs:
       parameters:
         - name: param
