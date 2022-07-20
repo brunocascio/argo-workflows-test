@@ -19,4 +19,4 @@ spec:
     container:
       image: docker/whalesay
       command: [cowsay]
-      args: ["{{inputs.parameters}}"]      # This template runs "cowsay" in the "whalesay" image with arguments "hello world"
+      args: ["{{inputs.parameters.revision}}"]      # This template runs "cowsay" in the "whalesay" image with arguments "hello world"
