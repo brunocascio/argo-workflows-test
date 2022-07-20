@@ -13,7 +13,9 @@ spec:
   - name: main               # Defining the "whalesay" template
     inputs:
       parameters:
-        - name: param
+        - name: event
+        - name: ref
+        - name: revision
     container:
       image: docker/whalesay
       command: [cowsay]
