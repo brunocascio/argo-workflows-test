@@ -6,7 +6,9 @@ spec:
   entrypoint: main           # Defines "whalesay" as the "main" template
   arguments:
     parameters:
-      - name: param
+      - name: event
+      - name: ref
+      - name: revision
   templates:
   - name: main               # Defining the "whalesay" template
     inputs:
@@ -15,4 +17,4 @@ spec:
     container:
       image: docker/whalesay
       command: [cowsay]
-      args: ["{{inputs.parameters.param}}"]      # This template runs "cowsay" in the "whalesay" image with arguments "hello world"
+      args: ["{{inputs.parameters}}"]      # This template runs "cowsay" in the "whalesay" image with arguments "hello world"
