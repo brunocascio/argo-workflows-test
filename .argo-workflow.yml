@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: test-ci-  # Name of this Workflow
+  generateName: github-repo-test-ci-  # Name of this Workflow
 spec:
   entrypoint: main           # Defines "whalesay" as the "main" template
   arguments:
